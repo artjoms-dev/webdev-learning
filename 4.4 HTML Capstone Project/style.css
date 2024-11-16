@@ -2,3 +2,12 @@ html {
     background-color: #424242;
     color: white;
 }
+
+#photo {
+    border: 3px dashed orchid;
+        border-top: 0px;
+        border-right: 0px;
+        border-width: 0px 0px 3px 3px;
+        padding: 2px;
+        margin: 5px;
+}
