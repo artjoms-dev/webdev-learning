@@ -4,4 +4,9 @@ h1 {
 
 .huge {
   font-size: 10rem;
+  color: white;
+}
+
+body {
+  background-color: slategrey;
 }
