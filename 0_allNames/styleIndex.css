@@ -27,11 +27,10 @@ body, html {
     z-index: 1000; /* Ensure it's above other elements */
     transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
     margin-top: 1rem;
+}
 
-    animation: gradientAnimation 10s ease infinite;
-    background: linear-gradient(-45deg, #e7f9ff, #eaecff, #edffee, #fff8e8);
-    background-size: 300% 300%;
-    animation: gradientAnimation 10s ease infinite;
+.navbar:hover {
+    background-color: rgba(255, 255, 255, 0.9); /* Less transparent on hover */
 }
 
 .logo {
@@ -104,27 +103,65 @@ body, html {
     100% { background-position: 0% 50%; }
 }
 
- ul.breadcrumb {
-    margin-top: 6rem;
-    padding: 10px 16px;
-    margin-right: 60px;
-    list-style: none;
-  }
-  
-  ul.breadcrumb li {
-    display: inline;
-    font-size: 12px;
-    font-family: 'Open Sans', cursive;
-    color: #333;
-  }
-  
-  ul.breadcrumb li+li:before {
-    padding: 8px;
-    color: #333;
-    content: "/\00a0";
-  }
-  
-  ul.breadcrumb li a:hover {
-    color: #01447e;
-    text-decoration: underline;
-  } 
+/* Кнопки категорий */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    margin-top: 0; /* Ensure buttons start from top */
+}
+
+.category {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+    color: #292929;
+    text-decoration: none;
+    transition: transform 0.3s ease, background 0.3s ease;
+    background: rgba(255, 255, 255, 0.2); /* Transparent background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    font-family: 'Aboreto', cursive;
+    font-size: 6em;
+}
+
+.category:hover {
+    transform: scaleX(1.1);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    color: #ffffff;
+    filter: grayscale(0%);
+}
+
+.boys,
+.unisex,
+.girls {
+    height: 100%;
+    background-size: 300% 300%;
+    animation: gradientAnimation 10s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: grayscale(40%);
+}
+
+.boys { 
+    background: linear-gradient(-45deg, #84E3FF, #a0a8f3, #ACE2FD, #c7e6ff);
+    background-size: 300% 300%;
+    animation: gradientAnimation 10s ease infinite;
+}
+.unisex { 
+    background: linear-gradient(-45deg, #ffeac2, #ccffc7, #fde9bc, #b9e9b5);
+    background-size: 300% 300%;
+    animation: gradientAnimation 10s ease infinite;
+}
+.girls { 
+    background: linear-gradient(-45deg, #FE7979, #f4beff, #FBA79F, #EB9ABA);
+    background-size: 300% 300%;
+    animation: gradientAnimation 10s ease infinite;
+}
