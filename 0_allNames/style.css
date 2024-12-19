@@ -16,7 +16,7 @@ body, html {
     left: 50%;
     transform: translateX(-50%); /* Center horizontally */
     width: 90%; /* Span most of the width */
-    height: 60px; /* Height of the navbar */
+    height: 4rem; /* Height of the navbar */
     background-color: rgba(255, 255, 255, 0.2); /* 90% transparent */
     border-radius: 30px; /* Create the oval shape */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
@@ -36,14 +36,14 @@ body, html {
 
 .logo {
     font-family: 'Aboreto', cursive;
-    font-size: 24px;
+    font-size: 1.3rem;
     font-weight: bold;
     color: #333;
 }
 
 .menu {
     display: flex;
-    gap: 15px;
+    gap: 1rem;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -56,7 +56,7 @@ body, html {
 .menu li a {
     text-decoration: none;
     font-family: 'Open Sans', cursive;
-    font-size: 14px;
+    font-size: 0.9rem;
     color: #333;
     padding: 5px 5px;
     transition: color 0.3s;
@@ -68,7 +68,7 @@ body, html {
 
 .menu select {
     font-family: 'Open Sans', cursive;
-    font-size: 14px;
+    font-size: 0.8rem;
     padding: 5px;
     border: 0px;
     border-radius: 5px;
@@ -81,7 +81,7 @@ body, html {
     padding: 5px 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 0.9rem;
     background-color: rgba(255, 255, 255, 0.5)
 }
 
@@ -104,27 +104,173 @@ body, html {
     100% { background-position: 0% 50%; }
 }
 
- ul.breadcrumb {
-    margin-top: 6rem;
-    padding: 10px 16px;
-    margin-right: 60px;
+.filler {
+    background-color: #ffffff;
+    height: 6rem;
+}
+
+ul.breadcrumb {
     list-style: none;
-  }
+    padding-left: 2rem;
+}
   
-  ul.breadcrumb li {
+ul.breadcrumb li {
     display: inline;
     font-size: 12px;
     font-family: 'Open Sans', cursive;
     color: #333;
-  }
+}
   
-  ul.breadcrumb li+li:before {
+ul.breadcrumb li+li:before {
     padding: 8px;
     color: #333;
     content: "/\00a0";
-  }
+}
   
-  ul.breadcrumb li a:hover {
+ul.breadcrumb li a:hover {
     color: #01447e;
     text-decoration: underline;
-  } 
+} 
+
+.main {
+    padding: 2rem;
+}
+
+h1 {
+    font-family: 'Open Sans', cursive;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.filter-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.filter-group select,
+.filter-group input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dropdown span {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #fff;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    padding: 10px;
+    min-width: 150px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content button {
+    display: block;
+    background: none;
+    border: none;
+    padding: 5px;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+}
+
+.dropdown-content button:hover {
+    background-color: #f1f1f1;
+}
+
+.names-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.names-table th,
+.names-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.names-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.ad-row td {
+    text-align: center;
+    color: #999;
+    font-style: italic;
+}
+
+.selected-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px;
+}
+
+.filter-tag {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.filter-tag button {
+    margin-left: 10px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.filter-tag button:hover {
+    color: #ddd;
+}

@@ -30,9 +30,132 @@
     </div>
     </nav>
 
+    <div class="filler"></div>
+
     <ul class="breadcrumb">
         <li><a href="./index.html">Home</a></li>
         <li>Boy Names</li>
     </ul> 
+
+    <div class="main">
+        <h1>Filters</h1>
+        
+        <div class="filters">
+            <div class="filter-group">
+                <label for="origin">Origin:</label>
+                <select id="origin" name="origin">
+                    <option value="">Select</option>
+                    <option value="slavic">Slavic</option>
+                    <option value="american">American</option>
+                    <option value="greek">Greek</option>
+                    <!-- Add more origins as needed -->
+                </select>
+            </div>
+    
+            <div class="filter-group">
+                <label for="length">Length:</label>
+                <div class="dropdown" id="length-dropdown">
+                    <span id="length-display">1 - 20</span>
+                    <div class="dropdown-content">
+                        <label for="min-length">Min:</label>
+                        <input type="number" id="min-length" name="min-length" min="1" max="20" value="1">
+                        <label for="max-length">Max:</label>
+                        <input type="number" id="max-length" name="max-length" min="1" max="20" value="20">
+                    </div>
+                </div>
+            </div>
+    
+            <div class="filter-group">
+                <label for="starts-with">Starts with:</label>
+                <div class="dropdown" id="starts-with-dropdown">
+                    <span id="starts-with-display">Select Letter</span>
+                    <div class="dropdown-content">
+                        <button data-letter="A">A</button>
+                        <button data-letter="B">B</button>
+                        <button data-letter="C">C</button>
+                        <button data-letter="D">D</button>
+                        <button data-letter="E">E</button>
+                        <button data-letter="F">F</button>
+                        <button data-letter="G">G</button>
+                        <button data-letter="H">H</button>
+                        <button data-letter="I">I</button>
+                        <button data-letter="J">J</button>
+                        <button data-letter="K">K</button>
+                        <button data-letter="L">L</button>
+                        <button data-letter="M">M</button>
+                        <button data-letter="N">N</button>
+                        <button data-letter="O">O</button>
+                        <button data-letter="P">P</button>
+                        <button data-letter="Q">Q</button>
+                        <button data-letter="R">R</button>
+                        <button data-letter="S">S</button>
+                        <button data-letter="T">T</button>
+                        <button data-letter="U">U</button>
+                        <button data-letter="V">V</button>
+                        <button data-letter="W">W</button>
+                        <button data-letter="X">X</button>
+                        <button data-letter="Y">Y</button>
+                        <button data-letter="Z">Z</button>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="filter-group">
+                <label for="meaning">Meaning:</label>
+                <div class="dropdown" id="meaning-dropdown">
+                    <span id="meaning-display">Select Meaning</span>
+                    <div class="dropdown-content">
+                        <button data-meaning="strong">Strong</button>
+                        <button data-meaning="healthy">Healthy</button>
+                        <button data-meaning="happy">Happy</button>
+                        <!-- Add more predefined meanings as needed -->
+                    </div>
+                </div>
+            </div>
+    
+            <button id="apply-filters">Apply Filters</button>
+        </div>
+    
+        <!-- Selected Filters -->
+        <div class="selected-filters">
+        </div>
+    
+        <!-- Table of Names -->
+        <table class="names-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Origin</th>
+                    <th>Meaning</th>
+                    <th>History</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Placeholder for dynamically generated rows -->
+                <tr>
+                    <td>Artyom</td>
+                    <td>Slavic</td>
+                    <td>Healthy, hunter</td>
+                    <td>Name comes from ancient Greek Goddess Artemis</td>
+                </tr>
+                <tr>
+                    <td>Arthur</td>
+                    <td>American</td>
+                    <td>King, noble</td>
+                    <td>Name comes from medieval England</td>
+                </tr>
+                <!-- Ad Placeholder -->
+                <tr class="ad-row">
+                    <td colspan="4">
+                        <div class="ad">Advertisement</div>
+                    </td>
+                </tr>
+                <!-- More dynamically generated rows -->
+            </tbody>
+        </table>
+    
+        <script src="allBoys.js"></script>
+
+    </div>
 </body>
 </html>
